@@ -3,19 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chess Board of The Shire
-    </title>
+    <title>ChessBoard</title>
+    <style>
+        /* set up styles that only apply to the chessboard div */
+        #divChessboard{
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+
+        }
+        .chessSquare{
+            float: left;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>
-            Care for a game travler?
-        </h1>
+        <h1>Care for a game travler?</h1>
     </header>
     <main>
-
+        <div id="divChessboard"></div>
     </main>
     <script>
+        //function to build a chessboard
+        function buildChessBoard(){
+            //shortcut to html div
+            let chessBoard = document.getElementById("divChessboard");
+
+            //outer loop to create
+            for (let i=0; i < 8; i++){
+                //inner loop to create 8 columns
+                for (let j=0; j < 8; j++){
+                    let chessSquare = document.createElement('div');
+
+                    //add the css class to the div
+                    chessSquare.className = 'chessSquare';
+
+                    //use modules to alternate the colors of squares
+                    //divide the number by 2 and if the remander is 0 then the number is even
+                    if ((i+j) % 2 == 0){
+                        chessSquare.style.backgroundColor = "black";
+                    }
+
+                    //add the square to the board
+                    chessBoard.appendChild(chessSquare);
+                }
+            }
+        }
+
+        //call the function to build chess board
+        buildChessBoard();
 
     </script>
     
