@@ -1,0 +1,46 @@
+        @font-face {
+/*Here I am naming my font so that I can refernce it*/
+font-family: 'RingBearer';
+/*Here I am linking my font file so that when I refernce it it knows what the font looks like*/
+src: url('RingbearerMedium-51mgZ.ttf') format('truetype');
+/*these tags let the code know that the style and weight should be normal rather than bold or italic*/
+font-weight: normal; 
+font-style: normal; 
+}
+
+body{
+    background: radial-gradient( rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.425) ), url('Shire_background.jpg');
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, top;
+    background-attachment: fixed;
+    background-color: #20271a;
+    color: #dbc7a1;
+    text-shadow: 4px 4px 4px #473e26;
+    font-family: 'RingBearer', serif;
+    text-align: center;
+    
+}
+
+h1{
+    font-size: xxx-large;
+}
+
+/* set up styles that only apply to the chessboard div */
+#divChessboard {
+    width: 90vw;
+    aspect-ratio: 1 / 1; /*set an aspect ratio so the chess board stays a square no matter the screen size*/
+    max-width: 700px;
+    border: 1px solid black;
+    background-color: #b59e87;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto; /*Center the chess board*/
+}
+
+.chessSquare {
+    flex: 0 0 12.5%; /*Set it up so the indiviudal squares align nicely in the chessboard*/
+    aspect-ratio: 1 / 1; /*set an aspect ratio so the chess board stays a square no matter the screen size*/
+    align-items: center;
+}
