@@ -1,13 +1,13 @@
 //create a 2d array to manage the layout of the pieces on the board
 arrPieces = [
-    [null, 'w', null, 'w', null, 'w', null, 'w'],
-    ['w', null, 'w', null, 'w', null, 'w', null],
-    [null, 'w', null, 'w', null, 'w', null, 'w'],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
     ['b', null, 'b', null, 'b', null, 'b', null],
     [null, 'b', null, 'b', null, 'b', null, 'b'],
-    ['b', null, 'b', null, 'b', null, 'b', null]
+    ['b', null, 'b', null, 'b', null, 'b', null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, 'w', null, 'w', null, 'w', null, 'w'],
+    ['w', null, 'w', null, 'w', null, 'w', null],
+    [null, 'w', null, 'w', null, 'w', null, 'w']
 ];
 
 //create a pointer to the secret span
