@@ -45,18 +45,25 @@
         align-items: center;
     }
 
-    .checkerPiece{
-        width: 55px;
-        height: 55px;
-        margin: 2.5px;
-        border-radius: 50%; /*make the pieces roundy*/
-        box-shadow: 4px 4px 4px gray;
+    .checkerPiece {
+        width: 70%;
+        aspect-ratio: 1 / 1;
+        margin: 10px auto;
+        border-radius: 50%;
+        box-shadow: 0.3em 0.3em 0.3em rgb(0, 0, 0);
     }
 
     .checkerPiece-w{
-        background-color: ivory;
+        background-color: #cfbda1;
     }
 
     .checkerPiece-b{
-        background-color: rgb(0, 0, 0);
+        background-color: #4b2e1e;
+    }
+
+    .checkerPiece:hover{
+    outline: 2px solid #ffd77f;
+    box-shadow: 0 0 8px #ffd77f;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
     }
