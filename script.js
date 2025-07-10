@@ -1,13 +1,13 @@
 //create a 2d array to manage the layout of the pieces on the board
 arrPieces = [
-    ['b', null, 'b', null, 'b', null, 'b', null],
-    [null, 'b', null, 'b', null, 'b', null, 'b'],
-    ['b', null, 'b', null, 'b', null, 'b', null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
+    ['w', null, 'w', null, 'w', null, 'w', null],
     [null, 'w', null, 'w', null, 'w', null, 'w'],
     ['w', null, 'w', null, 'w', null, 'w', null],
-    [null, 'w', null, 'w', null, 'w', null, 'w']
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, 'b', null, 'b', null, 'b', null, 'b'],
+    ['b', null, 'b', null, 'b', null, 'b', null],
+    [null, 'b', null, 'b', null, 'b', null, 'b']
 ];
 
 //create a pointer to the secret span
@@ -92,7 +92,7 @@ function movePiece(event){
 
         var newSquare = document.getElementById("div" + newSquareId);
         //create new piece on new square
-        createPiece("piece" + newSquare, oldPieceColorClass, newSquare);
+        createPiece("piece" + newSquareId, oldPieceColorClass, newSquare);
 
         secretSpan.textContent = "";
     }
